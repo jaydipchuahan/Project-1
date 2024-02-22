@@ -37,10 +37,32 @@
             <a class="logo" href="#">
                 <p title="LOGO & NAME OF FOUNDER">JAYDIP</p>
             </a>
+            <a class="form" href="#" onclick="signIn(this)">Sign In</a>
+
         </div>
     </header>
     <!--Home Section-->
+    <div class="sign-in-container">
+        <div class="close-form">
+            <div class="circle" onclick="FormClose(this)">
+                <a href="">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+        </div>
+        <div class="form-header">
+            <h2>Sign In</h2>
+        </div>
+        <div class="form-body">
+            <label class="lbl" for="username"> Enter Your Name</label>
+            <input class="inp" type="text" id="username" placeholder="Enter Your Username">
+            <label class="lbl" for="password"> Enter Your password</label>
+            <input class="inp" type="password" id="password" placeholder="Enter Your Password">
+            <button class="btn"  onclick="FormClose(this)"> Sign In</button>
+        </div>
+    </div>
     <section>
+
         <div class="Home">
             <div class="left-side">
                 <p style="text-align: end;" class="Highlight-text">New Style New Look.</p>
@@ -313,7 +335,8 @@
                 <div class="container-fluid">
                     <div class="col-6">
                         <form action="">
-                            <textarea name="" id="" cols="50" rows="10" placeholder="Send Your Message" title="Enter Your Privew"></textarea>
+                            <textarea name="" id="" cols="50" rows="10" placeholder="Send Your Message"
+                                title="Enter Your Privew"></textarea>
                             <button id="">Send Me</button>
                         </form>
 
@@ -328,7 +351,7 @@
                             <a>Contact</a>
                             <a>Change Log</a>
                             <a>Become affilite</a>
-                             <a>Contact</a>
+                            <a>Contact</a>
                             <a>Change Log</a>
                             <a>Become affilite</a>
                         </div>
@@ -336,13 +359,13 @@
                             <a>Contact</a>
                             <a>Change Log</a>
                             <a>Become affilite</a>
-                             <a>Contact</a>
+                            <a>Contact</a>
                             <a>Change Log</a>
                             <a>Become affilite</a>
                             <a>Contact</a>
                             <a>Change Log</a>
                             <a>Become affilite</a>
-                             <a>Contact</a>
+                            <a>Contact</a>
                             <a>Change Log</a>
                             <a>Become affilite</a>
                         </div>
@@ -358,6 +381,16 @@
                 navbtn[i].classList.remove("nav-a");
             }
             navbtn[data].classList.add("nav-a");
+
+        }
+        function signIn(data) {
+            let sign = document.querySelector(".sign-in-container");
+            console.log("hello");
+            sign.style.display = "block";
+        }
+        function FormClose(data) {
+            let close = document.querySelector(".sign-in-container");
+            close.style.display = "none";
 
         }
     </script>
